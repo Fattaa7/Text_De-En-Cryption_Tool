@@ -2,7 +2,7 @@
 
 std::string VigenereCipher::encrypt(const std::string &text, const std::string &key)
 {
-    return "hello";
+    return "from vigenere";
 }
 
 std::string VigenereCipher::decrypt(const std::string &text, const std::string &key)

@@ -1,4 +1,4 @@
-﻿  VigenereCipher.cpp
-  main.cpp
+﻿  Controller.cpp
+  EncryptionContext.cpp
   Generating Code...
   Text_DeEnCryption_Tool.vcxproj -> C:\Users\ahmed\Documents\Git_Projects\Text_De-En-Cryption_Tool\Text_DeEnCryption_Tool\x64\Debug\Text_DeEnCryption_Tool.exe

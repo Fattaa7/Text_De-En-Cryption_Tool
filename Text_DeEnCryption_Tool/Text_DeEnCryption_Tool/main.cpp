@@ -3,19 +3,25 @@
 #include "CaeserCipher.h"
 #include "VigenereCipher.h"
 #include "EncryptionContext.h"
+#include "Controller.h"
+
 int main() {
 
 	//EncryptionStrategy* ptr = new CaeserCipher();
-	EncryptionContext* con = new EncryptionContext(new CaeserCipher);
+	Controller con;
+
+
+
 
 	std::string x = "abcd";
 	std::string z = "1";
-
 	std::string y{};
 
-	y = con->encrypt(x, z);
+	con.init(2, x, z);
 
-	std::cout << y << std::endl;
+
+	//y = con->encrypt(x, z);
+
 
 	return 0;
 }
