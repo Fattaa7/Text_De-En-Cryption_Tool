@@ -1,18 +1,8 @@
 #include "Controller.h"
 
-Controller::Controller()
-{
-
-
-
-}
-
-void Controller::init(int selection,std::string txt, std::string key)
+EncryptionStrategy* Controller::algoSelector()
 {
 	EncryptionStrategy* ptr{ nullptr };
-	std::string output{};
-	this->text = txt;
-	this->key = key;
 
 	switch (selection)
 	{
@@ -26,14 +16,56 @@ void Controller::init(int selection,std::string txt, std::string key)
 		break;
 	}
 
-	EncryptionContext* con = new EncryptionContext(ptr);
+	return ptr;
+}
 
-	output = con->encrypt(text, this->key);
+Controller::Controller()
+{
+
+
+}
+
+void Controller::init()
+{
+	
+	EncryptionContext* con;
+	EncryptionStrategy* ptr{ nullptr };
+	std::string output{};
+
+	
+	ptr = algoSelector();
+
+	 con = new EncryptionContext(ptr);
+
+	switch (mode)
+	{
+	case 1:
+		output = con->encrypt(text, key);
+		break;
+	case 2:
+		output = con->decrypt(text, key);
+		break;
+	default:
+		break;
+	}
+
 
 
 	delete con;
 
 	std::cout << output << std::endl;
+
+	
+}
+
+void Controller::getData()
+{
+	ui.sayHello();
+	ui.showAvailableAlgo(algo_list);
+	selection = ui.selectAlgo();
+	text = ui.inputText();
+	key = ui.inputKey();
+	mode = ui.selectMode();
 }
 
 

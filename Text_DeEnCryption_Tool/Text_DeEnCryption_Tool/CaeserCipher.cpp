@@ -4,40 +4,43 @@
 std::string CaeserCipher::encrypt(const std::string &text, const std::string &key) {
 
 	int key_num = stoi(key);
-	std::string final_txt = text;
+	std::string final_txt = "";
 
-	for (int i{}; i < text.length(); i++) {
-		final_txt[i] = text[i];
+	for (int i = 0; i < text.length(); i++) {
+		char currentChar = text[i];
 
-		if (final_txt[i] >= 'a' && final_txt[i] <= 'z') {
-			final_txt[i] += key_num;
-
-			if (final_txt[i] > 'z')
-			{
-				final_txt[i] = final_txt[i] - 'z' + 'a' - 1;
-			}
+		if (islower(currentChar)) {
+			currentChar = 'a' + (currentChar - 'a' + key_num) % 26;
+		}
+		else if (isupper(currentChar)) {
+			currentChar = 'A' + (currentChar - 'A' + key_num) % 26;
 		}
 
-		
-
-		if (final_txt[i] >= 'A' && final_txt[i] <= 'Z') {
-	
-
-			final_txt[i] += key_num;
-		if (final_txt[i] > 'Z')
-			{
-				final_txt[i] = final_txt[i] - 'Z' + 'A' - 1;
-			}
-		}
-
-
-
-	};
+		final_txt += currentChar;
+	}
 
 	return final_txt;
 }
 
+
 std::string CaeserCipher::decrypt(const std::string &text, const std::string &key) {
 
-	return "hello";
+	int key_num = stoi(key);
+	std::string final_txt = "";
+
+	for (int i = 0; i < text.length(); i++) {
+		char currentChar = text[i];
+
+		if (islower(currentChar)) {
+			currentChar = 'a' + (currentChar - 'a' - key_num + 26) % 26;
+		}
+		else if (isupper(currentChar)) {
+			currentChar = 'A' + (currentChar - 'A' - key_num + 26) % 26;
+		}
+
+		final_txt += currentChar;
+	}
+
+	return final_txt;
 }
+

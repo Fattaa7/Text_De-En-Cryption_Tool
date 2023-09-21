@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaeserCipher.cpp" />
+    <ClCompile Include="CMD.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="main.cpp" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaeserCipher.h" />
+    <ClInclude Include="CMD.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="EncryptionStrategy.h" />

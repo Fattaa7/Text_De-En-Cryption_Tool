@@ -1,25 +1,32 @@
 #pragma once
+#include <vector>
+#include <map>
+#include "CMD.h"
 #include "EncryptionContext.h"
 #include "CaeserCipher.h"
 #include "VigenereCipher.h"
-#include <vector>
-#include <map>
+
 
 class Controller
 {
 private:
 
+	int selection{};
+	int mode{};
 	std::string text{};
 	std::string key{};
 	std::map<int, std::string> algo_list = {
-		{1, "CaeserCipher"},
-		{2, "VigenereCipher"}
+		{1, "Caeser Cipher"},
+		{2, "Vigenere Cipher"}
 	};
+	CMD ui;
+	EncryptionStrategy* algoSelector();
 
 
 
 public:
 	Controller() ;
-	void init(int selection, std::string txt, std::string key);
+	void init();
+	void getData();
 };
 

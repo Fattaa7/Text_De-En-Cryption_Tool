@@ -10,14 +10,9 @@ int main() {
 	//EncryptionStrategy* ptr = new CaeserCipher();
 	Controller con;
 
+	con.getData();
 
-
-
-	std::string x = "abcd";
-	std::string z = "1";
-	std::string y{};
-
-	con.init(2, x, z);
+	con.init();
 
 
 	//y = con->encrypt(x, z);
