@@ -24,6 +24,9 @@
     <ClCompile Include="VigenereCipher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EncryptionContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionStrategy.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VigenereCipher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EncryptionContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

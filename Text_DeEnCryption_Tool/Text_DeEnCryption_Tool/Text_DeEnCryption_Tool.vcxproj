@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaeserCipher.cpp" />
+    <ClCompile Include="EncryptionContext.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="VigenereCipher.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaeserCipher.h" />
+    <ClInclude Include="EncryptionContext.h" />
     <ClInclude Include="EncryptionStrategy.h" />
     <ClInclude Include="VigenereCipher.h" />
   </ItemGroup>
