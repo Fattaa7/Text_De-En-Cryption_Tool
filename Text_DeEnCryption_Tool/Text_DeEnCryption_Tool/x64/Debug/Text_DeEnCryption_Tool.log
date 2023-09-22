@@ -1,2 +1,5 @@
-﻿  CaeserCipher.cpp
+﻿  VigenereCipher.cpp
+C:\Users\ahmed\Documents\Git_Projects\Text_De-En-Cryption_Tool\Text_DeEnCryption_Tool\Text_DeEnCryption_Tool\VigenereCipher.cpp(6,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ahmed\Documents\Git_Projects\Text_De-En-Cryption_Tool\Text_DeEnCryption_Tool\Text_DeEnCryption_Tool\VigenereCipher.cpp(7,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ahmed\Documents\Git_Projects\Text_De-En-Cryption_Tool\Text_DeEnCryption_Tool\Text_DeEnCryption_Tool\VigenereCipher.cpp(23,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Text_DeEnCryption_Tool.vcxproj -> C:\Users\ahmed\Documents\Git_Projects\Text_De-En-Cryption_Tool\Text_DeEnCryption_Tool\x64\Debug\Text_DeEnCryption_Tool.exe
