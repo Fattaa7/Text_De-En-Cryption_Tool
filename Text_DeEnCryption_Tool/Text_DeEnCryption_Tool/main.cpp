@@ -7,15 +7,14 @@
 
 int main() {
 
-	//EncryptionStrategy* ptr = new CaeserCipher();
 	Controller con;
 
-	con.getData();
+	while (1) {
+		con.getData();
 
-	con.init();
+		con.init();
+	}
 
-
-	//y = con->encrypt(x, z);
 
 
 	return 0;

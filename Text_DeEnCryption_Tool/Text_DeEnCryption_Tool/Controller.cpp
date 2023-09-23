@@ -21,6 +21,7 @@ EncryptionStrategy* Controller::algoSelector()
 
 Controller::Controller()
 {
+	ui.sayHello();
 
 
 }
@@ -53,14 +54,13 @@ void Controller::init()
 
 	delete con;
 
-	std::cout << output << std::endl;
+	std::cout << output << std::endl << std::endl;
 
 	
 }
 
 void Controller::getData()
 {
-	ui.sayHello();
 	ui.showAvailableAlgo(algo_list);
 	selection = ui.selectAlgo();
 	text = ui.inputText();
