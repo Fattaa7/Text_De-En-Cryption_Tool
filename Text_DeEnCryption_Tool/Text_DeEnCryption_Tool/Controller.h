@@ -26,7 +26,7 @@ private:
 
 public:
 	Controller() ;
-	void init();
+	int init();
 	void getData();
 };
 

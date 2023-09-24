@@ -26,7 +26,7 @@ Controller::Controller()
 
 }
 
-void Controller::init()
+int Controller::init()
 {
 	
 	EncryptionContext* con;
@@ -50,13 +50,21 @@ void Controller::init()
 		break;
 	}
 
-
-
 	delete con;
+
+
+	if (output == "")
+	{
+		std::cout << "YOU ENETERED SOMETHING WRONG!" << std::endl << std::endl;
+
+		return -1;
+	}
+
+	
 
 	std::cout << output << std::endl << std::endl;
 
-	
+	return 1;
 }
 
 void Controller::getData()

@@ -6,7 +6,17 @@ std::string VigenereCipher::generateKey(const std::string& text, const std::stri
     int key_len = key.size();
     int text_len = text.size();
 
+
+    for (auto c : key)
+    {
+        if (std::isdigit(c))
+        {
+            return "";
+        }
+    }
+
     for (int i = 0, j = 0; i < text_len; i++) {
+
 
         if (isalpha(text[i])) {
             gen_key[i] = key[j % key_len];
@@ -19,7 +29,12 @@ std::string VigenereCipher::generateKey(const std::string& text, const std::stri
 
 std::string VigenereCipher::encrypt(const std::string &text, const std::string &key)
 {
+
     vig_key = generateKey(text, key);
+
+    if (vig_key == "") {
+        return "";
+    }
     int text_len = text.size();
     int shift{};
     std::string encrypted_text = text; // Initialize encrypted_text with the same content as text
